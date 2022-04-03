@@ -1,0 +1,23 @@
+#include <ESP8266WiFi.h>
+
+void setup()
+{
+  Serial.begin(115200);
+  Serial.println();
+
+  Serial.print("Boot...");
+  boolean result = WiFi.softAP("NOMDUWIFI", "MOTDEPASSEDUWIFI");
+  if(result == true)
+  {
+    Serial.println("Prêt");
+  }
+  else
+  {
+    Serial.println("Erreur");
+  }
+}
+
+void loop()
+{
+  
+}
